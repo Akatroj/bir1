@@ -1,0 +1,60 @@
+{
+  "name": "bir1",
+  "version": "3.0.2",
+  "description": "GUS REGON api client",
+  "keywords": [
+    "companies",
+    "regon",
+    "nip",
+    "gus"
+  ],
+  "repository": "pawel-id/bir1",
+  "license": "MIT",
+  "author": "Paweł Idczak <pawel.idczak@gmail.com>",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./normalize": {
+      "types": "./dist/normalize.d.ts",
+      "default": "./dist/normalize.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "docs": "rimraf docs && typedoc",
+    "build": "rimraf dist && tsc",
+    "dev": "tsc -w",
+    "test": "tap",
+    "pretty": "prettier --write src"
+  },
+  "dependencies": {
+    "assert": "^2.1.0",
+    "axios": "^1.7.9",
+    "entities": "^4.5.0",
+    "fast-xml-parser": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/xml2js": "^0.4.14",
+    "bir1-legacy": "npm:bir1@^2",
+    "dotenv": "^16.3.1",
+    "prettier": "3.2.5",
+    "rimraf": "^5.0.5",
+    "tap": "^18.7.0",
+    "ts-node": "^10.9.2",
+    "typedoc": "^0.25.6",
+    "typedoc-plugin-markdown": "^3.17.1",
+    "typedoc-plugin-missing-exports": "^2.1.0",
+    "typedoc-plugin-rename-defaults": "^0.7.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
